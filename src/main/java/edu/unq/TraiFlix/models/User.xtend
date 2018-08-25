@@ -2,7 +2,9 @@ package edu.unq.TraiFlix.models
 
 import java.util.List
 import java.util.Date
+import org.eclipse.xtend.lib.annotations.Accessors
 
+@Accessors
 class User {
 	Integer id;
 	String nick;
