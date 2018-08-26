@@ -2,8 +2,6 @@ package edu.unq.TraiFlix.models;
 
 import edu.unq.TraiFlix.models.Actor;
 import edu.unq.TraiFlix.models.Assessment;
-import edu.unq.TraiFlix.models.Category;
-import edu.unq.TraiFlix.models.Clasification;
 import edu.unq.TraiFlix.models.Director;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,30 +17,22 @@ public class Content {
   
   private String title;
   
-  private List<Category> categories;
-  
-  private Clasification clasification;
-  
   private Date release;
   
   private List<Assessment> assessments;
   
-  private Calendar time;
+  private Calendar duration;
   
   private List<Director> directors;
   
   private List<Actor> actors;
   
-  private List<Content> relateds;
-  
   private String link;
   
   public Content() {
-    this.categories = CollectionLiterals.<Category>newArrayList();
     this.assessments = CollectionLiterals.<Assessment>newArrayList();
     this.directors = CollectionLiterals.<Director>newArrayList();
     this.actors = CollectionLiterals.<Actor>newArrayList();
-    this.relateds = CollectionLiterals.<Content>newArrayList();
   }
   
   public boolean addAssessment(final Assessment critic) {
@@ -68,24 +58,6 @@ public class Content {
   }
   
   @Pure
-  public List<Category> getCategories() {
-    return this.categories;
-  }
-  
-  public void setCategories(final List<Category> categories) {
-    this.categories = categories;
-  }
-  
-  @Pure
-  public Clasification getClasification() {
-    return this.clasification;
-  }
-  
-  public void setClasification(final Clasification clasification) {
-    this.clasification = clasification;
-  }
-  
-  @Pure
   public Date getRelease() {
     return this.release;
   }
@@ -104,12 +76,12 @@ public class Content {
   }
   
   @Pure
-  public Calendar getTime() {
-    return this.time;
+  public Calendar getDuration() {
+    return this.duration;
   }
   
-  public void setTime(final Calendar time) {
-    this.time = time;
+  public void setDuration(final Calendar duration) {
+    this.duration = duration;
   }
   
   @Pure
@@ -128,15 +100,6 @@ public class Content {
   
   public void setActors(final List<Actor> actors) {
     this.actors = actors;
-  }
-  
-  @Pure
-  public List<Content> getRelateds() {
-    return this.relateds;
-  }
-  
-  public void setRelateds(final List<Content> relateds) {
-    this.relateds = relateds;
   }
   
   @Pure

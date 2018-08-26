@@ -6,25 +6,24 @@ import org.eclipse.xtend.lib.annotations.Accessors
 @Accessors
 class TriFlix {
 	
-	List<Content> contents;
+	List<Movie> movies;
+	List<Serie> series;
 	List<User> users;
 	
 	
 	new(){
-		contents = newArrayList;
+		movies = newArrayList;
+		series = newArrayList;
 		users = newArrayList;
 	}
 	
-	def getMovies(){
-		contents.filter[it instanceof Movie]
+	
+	def setNewMovie(Movie movie) {
+		movies.add(movie);
 	}
 	
-		def getSeries(){
-		contents.filter[it instanceof Serie]
-	}
-	
-	def setNewContent(Content content) {
-		contents.add(content);
+	def setNewSerie(Serie serie) {
+		series.add(serie);
 	}
 	
 	def setNewUser(User user) {

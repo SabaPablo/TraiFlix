@@ -4,6 +4,7 @@ import edu.unq.TraiFlix.models.Content;
 import java.util.Date;
 import java.util.List;
 import org.eclipse.xtend.lib.annotations.Accessors;
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Pure;
 
 @Accessors
@@ -24,6 +25,12 @@ public class User {
   private List<Content> seen;
   
   private List<Content> favorite;
+  
+  public User() {
+    this.friends = CollectionLiterals.<User>newArrayList();
+    this.seen = CollectionLiterals.<Content>newArrayList();
+    this.favorite = CollectionLiterals.<Content>newArrayList();
+  }
   
   @Pure
   public Integer getId() {

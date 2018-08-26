@@ -16,5 +16,12 @@ class User {
 	List<Content> favorite;
 	
 	
+	new(){
+		friends = newArrayList
+		seen = newArrayList
+		favorite = newArrayList
+	}
+	
+	
 	
 }

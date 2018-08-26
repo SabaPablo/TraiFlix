@@ -7,24 +7,20 @@ import org.eclipse.xtend.lib.annotations.Accessors
 
 @Accessors
 class Content {
+	
 	 Integer id
 	 String title
-	 List<Category> categories
-	 Clasification clasification
 	 Date release
 	 List<Assessment> assessments
-	 Calendar time
+	 Calendar duration
 	 List<Director> directors
 	 List<Actor> actors
-	 List<Content> relateds
 	 String link
 	 
 	 new(){
-	 	categories = newArrayList
 	 	assessments = newArrayList
 	 	directors = newArrayList
 	 	actors = newArrayList
-	 	relateds = newArrayList
 	 } 
 	 
 	 def addAssessment(Assessment critic){
